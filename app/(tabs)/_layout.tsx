@@ -5,7 +5,16 @@ export default function TabsLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
-        name="Home"
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="gear" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="index"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
@@ -14,16 +23,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="Settings"
-        options={{
-          title: "Settings",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="Explore"
+        name="explore"
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
